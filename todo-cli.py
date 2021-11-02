@@ -1,7 +1,7 @@
 from sys import argv
-from os.path import exists
+from os.path import exists, expanduser
 
-TODO_FILE_PATH = '~/.todolist'
+TODO_FILE_PATH = expanduser('~/.todolist')
 
 def todo_file_exists():
     return exists(TODO_FILE_PATH)
